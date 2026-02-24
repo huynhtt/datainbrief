@@ -853,3 +853,8 @@ write.csv(corr_pc_sub, file.path(fig_dir, "Table_Corr_CEI_vs_SubIndices.csv"), r
 
 cat("\n[Data in Brief outputs saved]\n")
 cat("Tables & figures folder: ", fig_dir, "\n")
+
+pca_sum <- summary(pc)
+evr1 <- pca_sum$importance[2,1]   # Proportion of Variance of PC1
+cat("Explained variance PC1 (pooled PCA):", round(evr1*100, 1), "%\n")
+
